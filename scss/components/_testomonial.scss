@@ -1,0 +1,78 @@
+#testomonial-section {
+  width: 100%;
+
+  h3 {
+    text-align: center;
+  }
+
+  div {
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      flex-grow: 1;
+      text-align: center;
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .name {
+        font-size: var(--fs-para);
+        font-weight: 700;
+        color: var(--Dark-Blue);
+        margin: 1rem auto;
+      }
+
+      p {
+        max-width: 35ch;
+        margin: 0 auto;
+        font-size: var(--fs-sm-para);
+      }
+    }
+
+    .accordion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3.5rem 0;
+
+        >div{
+            padding: 0.15rem;
+            border: 1.9px solid var(--Bright-Red);
+            border-radius: 50%;
+            margin: 0 0.15rem;
+        }
+    }
+
+    @media (min-width: 55rem) {
+      flex-direction: row;
+      width: 150%;
+
+      .accordion{
+        display: none;
+      }
+
+      li {
+        display: block !important;
+        p {
+          max-width: 50ch;
+        }
+      }
+    }
+  }
+
+  >button{
+    margin: 0 auto;
+    @media (min-width: 55rem) {
+        margin-top: 3rem;
+    }
+  }
+}

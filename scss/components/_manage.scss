@@ -1,0 +1,74 @@
+#manage-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  > div {
+    text-align: center;
+    padding: 0 1.3rem;
+    h2 {
+      max-width: 17ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      font-size: var(--fs-sm-para);
+      max-width: 35ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  > ul {
+    text-align: left;
+    padding-left: 1.3rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      // split class is in utalities partial file
+      > p {
+        font-size: var(--fs-sm-para);
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  @media (min-width: 55rem) {
+    flex-direction: row;
+    gap: 0;
+
+    > div {
+      width: 50%;
+      text-align: left;
+
+      h2 {
+        max-width: 100%;
+        font-size: var(--fs-700);
+        margin-left: 0;
+      }
+
+      p {
+        margin-left: 0;
+      }
+    }
+
+    > ul {
+      width: 50%;
+
+      li {
+        > p {
+          margin-left: 6.5rem;
+          margin-top: 0.5rem;
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+:root {
+  --Bright-Red: hsl(12, 88%, 59%);
+  --Dark-Blue: hsl(228, 39%, 23%);
+  --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+  --Very-Dark-Blue: hsl(233, 12%, 13%);
+  --Very-Pale-Red: hsl(13, 100%, 96%);
+  --Vary-Light-Gray: hsl(0, 0%, 98%);
+  --fs-nav-btn: 1rem;
+  --fs-para: 1.05rem;
+  --fs-sm-para: 0.95rem;
+  --fs-700: 2rem;
+  --fs-900: 2.5rem;
+  --fs-logo: 7rem;
+}
+@media (min-width: 55rem) {
+  :root {
+    --fs-nav-btn: 0.855rem;
+    --fs-sm-para: 1.05rem;
+    --fs-logo: 8rem;
+    --fs-900: 3.4rem;
+    --fs-700: 2.7rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 2.5rem 0;
+  padding-bottom: 0;
+  background-color: rgb(222, 222, 222);
+}
+@media (min-width: 55rem) {
+  body {
+    padding: 3.5rem 0;
+    padding-bottom: 0;
+  }
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 55rem) {
+  h1,
+h2 {
+    margin-bottom: 1.4rem;
+  }
+}
+
+h1 {
+  font-size: var(--fs-900);
+  line-height: 1.28;
+  color: var(--Dark-Blue);
+}
+
+h2 {
+  font-size: var(--fs-700);
+  line-height: 1.5;
+  color: var(--Dark-Blue);
+}
+@media (min-width: 55rem) {
+  h2 {
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  color: var(--Dark-Blue);
+  font-size: var(--fs-700);
+}
+
+p {
+  color: var(--Dark-Grayish-Blue);
+}
+
+/***Heading***/
+header {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 1.3rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 55rem) {
+  header {
+    margin-bottom: 7rem;
+  }
+}
+
+.btn-primary {
+  width: 170px;
+  height: 46px;
+  border: none;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Very-Pale-Red);
+  background-color: var(--Bright-Red);
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 3px 20px hsl(12deg, 85%, 70%);
+  transition: 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: hsl(12deg, 91%, 74%);
+  cursor: pointer;
+}
+
+.split {
+  width: 100%;
+  display: flex;
+  background-color: var(--Very-Pale-Red);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.split > div {
+  font-size: var(--fs-para);
+  color: var(--Vary-Light-Gray);
+  font-weight: 700;
+  padding: 0.35rem 0;
+  width: 4.3rem;
+  text-align: center;
+  background-color: var(--Bright-Red);
+  border-radius: 1.2rem;
+}
+.split p {
+  max-width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: var(--fs-sm-para);
+  font-weight: 700;
+  color: var(--Dark-Blue);
+}
+@media (min-width: 55rem) {
+  .split {
+    background-color: transparent;
+  }
+  .split p {
+    padding-left: 2rem;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.spacer {
+  padding: 2rem 0;
+}
+@media (min-width: 55rem) {
+  .spacer {
+    padding: 3rem 0;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-logo {
+  width: var(--fs-logo);
+}
+nav #nav-open-btn,
+nav #nav-close-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--Dark-Blue);
+}
+nav #nav-list {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 85%;
+  padding: 2rem 0;
+  background-color: var(--Vary-Light-Gray);
+  border-radius: 0.35rem;
+  top: 6rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+nav #nav-list li {
+  padding: 0.7rem 1.3rem;
+  font-size: var(--fs-nav-btn);
+  font-weight: 700;
+  color: var(--Dark-Blue);
+  cursor: pointer;
+}
+nav .nav-btn {
+  display: none;
+}
+@media (min-width: 55rem) {
+  nav #nav-open-btn,
+nav #nav-close-btn {
+    display: none !important;
+  }
+  nav #nav-list {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  nav #nav-list li:hover {
+    color: var(--Dark-Grayish-Blue);
+  }
+  nav .nav-btn {
+    display: block;
+  }
+}
+
+#hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#hero-section img {
+  display: block;
+  max-width: 100%;
+}
+#hero-section div h1 {
+  max-width: 16ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+#hero-section div p {
+  max-width: 35ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--fs-para);
+  margin-bottom: 1.7rem;
+}
+#hero-section div button {
+  margin: 0 auto;
+}
+@media (min-width: 55rem) {
+  #hero-section {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  #hero-section img {
+    width: 50%;
+  }
+  #hero-section div {
+    width: 50%;
+    text-align: left;
+  }
+  #hero-section div h1 {
+    margin-left: 0;
+  }
+  #hero-section div p {
+    margin-left: 0;
+    margin-bottom: 2.3rem;
+  }
+  #hero-section div button {
+    margin: 0;
+  }
+}
+
+#manage-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#manage-section > div {
+  text-align: center;
+  padding: 0 1.3rem;
+}
+#manage-section > div h2 {
+  max-width: 17ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+#manage-section > div p {
+  font-size: var(--fs-sm-para);
+  max-width: 35ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+#manage-section > ul {
+  text-align: left;
+  padding-left: 1.3rem;
+}
+#manage-section > ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#manage-section > ul li > p {
+  font-size: var(--fs-sm-para);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 55rem) {
+  #manage-section {
+    flex-direction: row;
+    gap: 0;
+  }
+  #manage-section > div {
+    width: 50%;
+    text-align: left;
+  }
+  #manage-section > div h2 {
+    max-width: 100%;
+    font-size: var(--fs-700);
+    margin-left: 0;
+  }
+  #manage-section > div p {
+    margin-left: 0;
+  }
+  #manage-section > ul {
+    width: 50%;
+  }
+  #manage-section > ul li > p {
+    margin-left: 6.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+#testomonial-section {
+  width: 100%;
+}
+#testomonial-section h3 {
+  text-align: center;
+}
+#testomonial-section div {
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+#testomonial-section ul {
+  display: flex;
+  flex-direction: column;
+}
+#testomonial-section ul li {
+  flex-grow: 1;
+  text-align: center;
+}
+#testomonial-section ul li img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+#testomonial-section ul li .name {
+  font-size: var(--fs-para);
+  font-weight: 700;
+  color: var(--Dark-Blue);
+  margin: 1rem auto;
+}
+#testomonial-section ul li p {
+  max-width: 35ch;
+  margin: 0 auto;
+  font-size: var(--fs-sm-para);
+}
+#testomonial-section ul .accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.5rem 0;
+}
+#testomonial-section ul .accordion > div {
+  padding: 0.15rem;
+  border: 1.9px solid var(--Bright-Red);
+  border-radius: 50%;
+  margin: 0 0.15rem;
+}
+@media (min-width: 55rem) {
+  #testomonial-section ul {
+    flex-direction: row;
+    width: 150%;
+  }
+  #testomonial-section ul .accordion {
+    display: none;
+  }
+  #testomonial-section ul li {
+    display: block !important;
+  }
+  #testomonial-section ul li p {
+    max-width: 50ch;
+  }
+}
+#testomonial-section > button {
+  margin: 0 auto;
+}
+@media (min-width: 55rem) {
+  #testomonial-section > button {
+    margin-top: 3rem;
+  }
+}
+
+#simplify-section {
+  background-color: var(--Bright-Red);
+  text-align: center;
+}
+#simplify-section div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.3rem;
+}
+#simplify-section div h4 {
+  font-size: var(--fs-700);
+  max-width: 22ch;
+  line-height: 1.3;
+  color: var(--Vary-Light-Gray);
+  margin: 0 auto;
+}
+#simplify-section div button {
+  background-color: var(--Vary-Light-Gray);
+  color: var(--Bright-Red);
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  transition: 0.3s ease;
+}
+@media (min-width: 55rem) {
+  #simplify-section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  #simplify-section div h4 {
+    margin-left: 0;
+  }
+  #simplify-section div button {
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
